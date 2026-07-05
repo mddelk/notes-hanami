@@ -7,7 +7,7 @@
 - Set up the project with `bin/setup`
 - Run the server with `bin/dev`
 - View the app at [http://localhost:2300](http://localhost:2300)
-- Run the tests with `bundle exec rake`
+- Run the tests with `bin/test`
 
 ## Useful links
 

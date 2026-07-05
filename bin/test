@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+ENV["BUNDLE_GEMFILE"] ||= File.expand_path("../Gemfile", __dir__)
+require "rubygems"
+require "bundler/setup"
+
+ENV["HANAMI_ENV"] ||= "test"
+require "hanami/setup"
+require "hanami/prepare"
+
+$LOAD_PATH << Hanami.app.root.join("test")
+
+paths = ARGV
+  .reject { it.start_with?("-") }
+  .map do |path|
+    if Dir.exist?(path)
+      Dir.glob(File.join(path, "**/*_test.rb"))
+    elsif File.exist?(path)
+      path
+    else
+      raise "missing `#{path}`"
+    end
+  end.flatten
+paths = Hanami.app.root.glob("test/**/*_test.rb") if paths.empty?
+
+paths.each do |file|
+  Kernel.load file
+end
+
+require "minitest/autorun"

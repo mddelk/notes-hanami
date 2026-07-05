@@ -4,6 +4,9 @@ inherit_gem:
 AllCops:
   TargetRubyVersion: 4.0.5
   StringLiteralsFrozenByDefault: true
+  Exclude:
+    - !bin/test
+    - bin/{hanami,rake}
 
 Style/FrozenStringLiteralComment:
   Enabled: true
