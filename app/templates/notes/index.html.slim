@@ -1,1 +1,8 @@
 h1 Notes::Views::Notes::Index
+
+ul#notes
+  - notes.each do |note|
+    li id="notes_#{note.id}"
+      article
+        h2 = note.title
+        em = note.content
