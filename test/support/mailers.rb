@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Reset recorded mail deliveries between tests.
 #
 # In the test env, mail is delivered via a shared test delivery method, so recorded

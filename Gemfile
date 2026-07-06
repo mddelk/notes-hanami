@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
 gem "hanami", "~> 3.0.0"
@@ -36,9 +34,9 @@ group :cli, :development, :test do
   gem "hanami-minitest", "~> 3.0.0"
   gem "debug", "~> 1.11"
   gem "faker", "~> 3.8"
-  gem 'rubocop-lazy-config',
-      github: 'mddelk/rubocop-lazy-config',
-      require: false
+  gem "rubocop-lazy-config",
+    github: "mddelk/rubocop-lazy-config",
+    require: false
 end
 
 group :test do
