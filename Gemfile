@@ -34,7 +34,13 @@ end
 
 group :cli, :development, :test do
   gem "hanami-minitest", "~> 3.0.0"
+  gem "debug", "~> 1.11"
+  gem "faker", "~> 3.8"
+  gem 'rubocop-lazy-config',
+      github: 'mddelk/rubocop-lazy-config',
+      require: false
 end
+
 group :test do
   # Database
   gem "database_cleaner-sequel"

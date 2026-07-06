@@ -1,0 +1,10 @@
+inherit_gem:
+  rubocop-lazy-config: rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 4.0.5
+  StringLiteralsFrozenByDefault: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: never
