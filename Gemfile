@@ -15,6 +15,7 @@ gem "puma", ">= 7.1"
 gem "rake"
 gem "pg"
 gem "slim"
+gem "bcrypt-ruby"
 
 group :development do
   gem "hanami-webconsole", "~> 3.0.0"
